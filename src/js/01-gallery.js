@@ -1,11 +1,11 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
-// import * as basicLightbox from "basiclightbox";
+import * as basicLightbox from "basicLightbox";
 console.log(galleryItems);
 
 const galleryEl = document.querySelector(".gallery");
 
-// galleryEl.addEventListener("click", onGalleryClick);
+galleryEl.addEventListener("click", onGalleryClick);
 
 const galleryMarkup = galleryItems
   .map(({ preview, original, description }) => {
@@ -16,13 +16,14 @@ console.log(galleryMarkup);
 
 galleryEl.innerHTML = galleryMarkup;
 
-// function onGalleryClick(event) {
-//   event.preventDefault();
-//   if (event.target.classList.contains(".gallery__image")) {
-//     return;
-//   }
-//   const instance = basicLightbox.create(
-//     ` <div class="modal"><img src="${event.target.dataset.source}"></div>`
-//   );
-//   instance.show();
-// }
+function onGalleryClick(event) {
+  event.preventDefault();
+  console.log("I'm working");
+  if (event.target.classList.contains(".gallery__image")) {
+    return;
+  }
+  const instance = basicLightbox.create(
+    ` <div class="modal"><img src="${event.target.dataset.source}"></div>`
+  );
+  instance.show();
+}
