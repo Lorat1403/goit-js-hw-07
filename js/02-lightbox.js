@@ -12,3 +12,18 @@ const galleryMarkup = galleryItems
 console.log(galleryMarkup);
 
 galleryEl.innerHTML = galleryMarkup;
+
+galleryEl.addEventListener("click", onModalOpenClick);
+
+function onModalOpenClick(el) {
+  const imgTarget = el.target.classList.contains("gallery__image");
+  if (!imgTarget) {
+    return;
+  }
+
+  el.preventDefault();
+  const lightbox = new SimpleLightbox(".gallery a", {
+    captionDelay: 250,
+    captionClass: "caption--bg",
+  });
+}
