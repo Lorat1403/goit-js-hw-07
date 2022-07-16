@@ -37,11 +37,10 @@ function onGalleryClick(event) {
       }
     )
     .show();
-
-  function onEscPress(event) {
-    const ESC_KEY_CODE = "Escape";
-    if (event.code === ESC_KEY_CODE) {
-      instance.close();
-    }
+}
+function onEscPress(event) {
+  const ESC_KEY_CODE = "Escape";
+  if (event.code === ESC_KEY_CODE) {
+    instance.close();
   }
 }
