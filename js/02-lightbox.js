@@ -22,8 +22,8 @@ function onModalOpenClick(el) {
   }
 
   el.preventDefault();
-  const lightbox = new SimpleLightbox(".gallery a", {
-    captionDelay: 250,
-    captionClass: "caption--bg",
-  });
 }
+const lightbox = new SimpleLightbox(".gallery a", {
+  captionDelay: 250,
+  captionClass: "caption--bg",
+});

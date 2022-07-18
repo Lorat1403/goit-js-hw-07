@@ -35,5 +35,6 @@ function onGalleryClick(event) {
     if (event.code === ESC_KEY_CODE) {
       return instance.close();
     }
+    window.removeEventListener("keydown", onEscPress);
   }
 }
