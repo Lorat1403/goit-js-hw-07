@@ -25,5 +25,7 @@ function onModalOpenClick(el) {
 }
 const lightbox = new SimpleLightbox(".gallery a", {
   captionDelay: 250,
-  captionClass: "caption--bg",
+  captionData: "alt",
 });
+console.log(lightbox);
+

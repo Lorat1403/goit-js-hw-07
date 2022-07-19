@@ -34,7 +34,7 @@ function onGalleryClick(event) {
     const ESC_KEY_CODE = "Escape";
     if (event.code === ESC_KEY_CODE) {
       return instance.close();
+      window.removeEventListener("keydown", onEscPress);
     }
-    window.removeEventListener("keydown", onEscPress);
   }
 }
