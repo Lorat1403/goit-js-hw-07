@@ -24,11 +24,10 @@ function onModalOpenClick(el) {
   el.preventDefault();
 }
 const lightbox = new SimpleLightbox(".gallery a", {
-  captions: true,
-  captionType: "attr",
+  
   captionDelay: 250,
-  captionData: "alt",
-  captionPosition: "bottom",
+  captionsData: "alt",
+  
 });
 console.log(lightbox);
 
